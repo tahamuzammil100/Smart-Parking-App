@@ -36,7 +36,6 @@ android {
     }
     buildFeatures {
         compose = true
-        viewBinding = true
     }
 }
 
@@ -51,14 +50,11 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
 
-    // OpenStreetMap (100% FREE - no API key needed!)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    implementation("androidx.navigation:navigation-compose:2.7.6")
     implementation("org.osmdroid:osmdroid-android:6.1.18")
-
-    // Retrofit for API calls (simple HTTP library)
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-
-    // AppCompat for traditional Android UI
     implementation("androidx.appcompat:appcompat:1.6.1")
 
     testImplementation(libs.junit)
